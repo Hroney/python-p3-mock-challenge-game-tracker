@@ -7,6 +7,9 @@ from classes.many_to_many import Result
 
 class TestGame:
     """Game in many_to_many.py"""
+    def setup_method(self):
+        """Set up the initial state before each test method"""
+        Result.all = []
 
     def test_has_title(self):
         """Game is initialized with a title"""
